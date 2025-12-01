@@ -1,0 +1,118 @@
+[
+    {
+        "name": "smart_object_layer_bg_size_4000x2250",
+        "human_name": "bg",
+        "index": "1000",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/common_smart_object_layer_bg.png",
+        "bbox": [
+            0,
+            0,
+            4000,
+            2250
+        ]
+    },
+    {
+        "name": "smart_object_layer_photo0_size_2050x1806",
+        "human_name": "photo0",
+        "index": "2001",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/slide_01_smart_object_layer_photo0_size_2050x1806_1.png",
+        "bbox": [
+            1969,
+            390,
+            4019,
+            2196
+        ]
+    },
+    {
+        "name": "smart_object_layer_separator_size_6x1266",
+        "human_name": "separator",
+        "index": "2002",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/common_smart_object_layer_separator.png",
+        "bbox": [
+            1999,
+            555,
+            2005,
+            1821
+        ]
+    },
+    {
+        "name": "type_layer_text1_size_1325x71",
+        "human_name": "text1",
+        "index": "2003",
+        "kind": "type",
+        "text": "",
+        "bitmap": "slides/slide_01_type_layer_text1_size_1325x71_1.png",
+        "bbox": [
+            337,
+            1229,
+            1662,
+            1300
+        ]
+    },
+    {
+        "name": "type_layer_text0_size_1414x359",
+        "human_name": "text0",
+        "index": "2004",
+        "kind": "type",
+        "text": "",
+        "bitmap": "slides/slide_01_type_layer_text0_size_1414x359_1.png",
+        "bbox": [
+            294,
+            785,
+            1708,
+            1144
+        ]
+    },
+    {
+        "name": "group_slide1_size_3725x1806",
+        "human_name": "_slide 1",
+        "index": "1001",
+        "kind": "group",
+        "text": "",
+        "bitmap": "",
+        "bbox": []
+    },
+    {
+        "name": "smart_object_layer_page_square_size_128x128",
+        "human_name": "page_square",
+        "index": "2001",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/common_smart_object_layer_page_square.png",
+        "bbox": [
+            3695,
+            1993,
+            3823,
+            2121
+        ]
+    },
+    {
+        "name": "type_layer_page_01_size_79x67",
+        "human_name": "page_01",
+        "index": "2002",
+        "kind": "type",
+        "text": "",
+        "bitmap": "slides/slide_01_type_layer_page_01_size_79x67_1.png",
+        "bbox": [
+            3718,
+            2012,
+            3797,
+            2079
+        ]
+    },
+    {
+        "name": "group_pages_size_128x128",
+        "human_name": "pages",
+        "index": "1002",
+        "kind": "group",
+        "text": "",
+        "bitmap": "",
+        "bbox": []
+    }
+]

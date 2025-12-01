@@ -1,0 +1,90 @@
+[
+    {
+        "name": "smart_object_layer_bg_size_4001x2251",
+        "human_name": "bg",
+        "index": "1000",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/common_smart_object_layer_bg.png",
+        "bbox": [
+            0,
+            0,
+            4001,
+            2251
+        ]
+    },
+    {
+        "name": "type_layer_text1_size_709x71",
+        "human_name": "text1",
+        "index": "2001",
+        "kind": "type",
+        "text": "",
+        "bitmap": "slides/slide_06_type_layer_text1_size_709x71_1.png",
+        "bbox": [
+            1647,
+            849,
+            2356,
+            920
+        ]
+    },
+    {
+        "name": "smart_object_layer_photo0_size_500x500",
+        "human_name": "photo0",
+        "index": "2002",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/slide_06_smart_object_layer_photo0_size_500x500_1.png",
+        "bbox": [
+            1750,
+            936,
+            2250,
+            1436
+        ]
+    },
+    {
+        "name": "group_slide14_size_709x587",
+        "human_name": "_slide 14",
+        "index": "1001",
+        "kind": "group",
+        "text": "",
+        "bitmap": "",
+        "bbox": []
+    },
+    {
+        "name": "smart_object_layer_page_square_size_128x128",
+        "human_name": "page_square",
+        "index": "2001",
+        "kind": "smartobject",
+        "text": "",
+        "bitmap": "slides/common_smart_object_layer_page_square.png",
+        "bbox": [
+            3696,
+            1994,
+            3824,
+            2122
+        ]
+    },
+    {
+        "name": "type_layer_page_06_size_104x67",
+        "human_name": "page_06",
+        "index": "2002",
+        "kind": "type",
+        "text": "",
+        "bitmap": "slides/slide_06_type_layer_page_06_size_104x67_1.png",
+        "bbox": [
+            3708,
+            2012,
+            3812,
+            2079
+        ]
+    },
+    {
+        "name": "group_pages_size_128x128",
+        "human_name": "pages",
+        "index": "1002",
+        "kind": "group",
+        "text": "",
+        "bitmap": "",
+        "bbox": []
+    }
+]
