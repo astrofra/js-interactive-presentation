@@ -165,10 +165,12 @@
 
   function animateTextLayers() {
     const textLayers = Array.from(stage.querySelectorAll('.text-layer'));
+    const total = textLayers.length;
     textLayers.forEach((el, idx) => {
       el.style.opacity = '0';
       el.style.transition = `opacity ${TEXT_FADE_MS}ms ease`;
-      el.style.transitionDelay = `${idx * TEXT_STAGGER_MS}ms`;
+      // Reverse the order: first text gets the largest delay.
+      el.style.transitionDelay = `${(total - idx - 1) * TEXT_STAGGER_MS}ms`;
     });
 
     requestAnimationFrame(() => {
