@@ -1,6 +1,7 @@
 ﻿// Simple data-driven slide player powered by JSON descriptors in static/slides.
 (function () {
   const stage = document.getElementById('stage');
+  const stageShell = document.getElementById('stage-shell');
   const loading = document.getElementById('loading');
   const errorBox = document.getElementById('error');
   const slideLabel = document.getElementById('slide-label');
@@ -10,9 +11,14 @@
   const slides = [];
   let currentSlide = 0;
   let currentPhoto = 0;
+  let activePhotoEl = null;
+  let activeSlideId = null;
 
   const MAX_SLIDES = 99;
   const DEFAULT_BASE = { width: 4000, height: 2250 };
+  const PHOTO_FADE_MS = 150;
+  const TEXT_FADE_MS = 150;
+  const TEXT_STAGGER_MS = 150;
 
   function pad(num) {
     return String(num).padStart(2, '0');
@@ -39,6 +45,54 @@
     if (loading) {
       loading.classList.add('hidden');
     }
+  }
+
+  function getLayerType(item) {
+    if (!item || !item.human_name) {
+      return 'layer';
+    }
+    if (item.human_name === 'bg') {
+      return 'background-layer';
+    }
+    if (/^photo\d+$/i.test(item.human_name)) {
+      return 'photo-layer';
+    }
+    if (/^text\d+$/i.test(item.human_name) || item.human_name === 'slide_title') {
+      return 'text-layer';
+    }
+    return 'overlay-layer';
+  }
+
+  function fitStageToViewport(slide) {
+    if (!stageShell || !slide) {
+      return;
+    }
+
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const padding = 32;
+    const hudHeight = document.getElementById('hud')?.offsetHeight || 0;
+    const statusHeight = statusLine?.offsetHeight || 0;
+    const errorHeight = errorBox?.offsetHeight || 0;
+
+    const availableWidth = Math.max(320, viewportWidth - padding * 2);
+    const availableHeight = Math.max(
+      240,
+      viewportHeight - padding * 2 - hudHeight - statusHeight - errorHeight
+    );
+
+    const ratio = slide.baseWidth / slide.baseHeight;
+    let targetWidth = availableWidth;
+    let targetHeight = targetWidth / ratio;
+
+    if (targetHeight > availableHeight) {
+      targetHeight = availableHeight;
+      targetWidth = targetHeight * ratio;
+    }
+
+    stageShell.style.width = `${Math.floor(targetWidth)}px`;
+    stageShell.style.height = `${Math.floor(targetHeight)}px`;
+    stageShell.style.aspectRatio = `${slide.baseWidth} / ${slide.baseHeight}`;
   }
 
   function buildSlide(rawItems, order) {
@@ -93,7 +147,7 @@
     }
 
     const element = document.createElement('img');
-    element.className = 'layer';
+    element.className = `layer ${getLayerType(item)}`;
     element.alt = item.human_name || item.name || 'layer';
     element.src = `static/${item.bitmap}`;
 
@@ -109,22 +163,89 @@
     return element;
   }
 
-  function renderSlide() {
+  function animateTextLayers() {
+    const textLayers = Array.from(stage.querySelectorAll('.text-layer'));
+    textLayers.forEach((el, idx) => {
+      el.style.opacity = '0';
+      el.style.transition = `opacity ${TEXT_FADE_MS}ms ease`;
+      el.style.transitionDelay = `${idx * TEXT_STAGGER_MS}ms`;
+    });
+
+    requestAnimationFrame(() => {
+      textLayers.forEach((el) => {
+        el.style.opacity = '1';
+      });
+    });
+  }
+
+  function renderPhotoLayer(slide) {
+    const photo = slide.photos[currentPhoto] || slide.photos[0];
+
+    if (!photo) {
+      if (activePhotoEl) {
+        activePhotoEl.remove();
+        activePhotoEl = null;
+      }
+      return;
+    }
+
+    const previousPhotoEl = activePhotoEl;
+    const newPhoto = createLayer(photo, {
+      width: slide.baseWidth,
+      height: slide.baseHeight,
+    });
+
+    if (!newPhoto) {
+      return;
+    }
+
+    newPhoto.style.opacity = '0';
+    newPhoto.style.transition = `opacity ${PHOTO_FADE_MS}ms ease`;
+    stage.appendChild(newPhoto);
+
+    // Force layout before starting the fade to guarantee the transition fires.
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    newPhoto.getBoundingClientRect();
+    requestAnimationFrame(() => {
+      newPhoto.style.opacity = '1';
+    });
+
+    if (previousPhotoEl) {
+      previousPhotoEl.style.transition = `opacity ${PHOTO_FADE_MS}ms ease`;
+      previousPhotoEl.style.opacity = '0';
+      previousPhotoEl.addEventListener(
+        'transitionend',
+        () => previousPhotoEl.remove(),
+        { once: true }
+      );
+      setTimeout(() => previousPhotoEl.remove(), PHOTO_FADE_MS * 2);
+    }
+
+    activePhotoEl = newPhoto;
+  }
+
+  function renderSlide(options = {}) {
+    const updatePhotoOnly = Boolean(options.updatePhotoOnly);
     const slide = slides[currentSlide];
     if (!slide) {
       return;
     }
 
+    fitStageToViewport(slide);
+
+    if (updatePhotoOnly && slide.id === activeSlideId) {
+      renderPhotoLayer(slide);
+      updateHud();
+      return;
+    }
+
+    activeSlideId = slide.id;
+    activePhotoEl = null;
     stage.innerHTML = '';
 
     const composite = [];
     if (slide.background) {
       composite.push(slide.background);
-    }
-
-    const photo = slide.photos[currentPhoto] || slide.photos[0];
-    if (photo) {
-      composite.push(photo);
     }
 
     composite.push(...slide.staticLayers);
@@ -141,6 +262,8 @@
         }
       });
 
+    animateTextLayers();
+    renderPhotoLayer(slide);
     updateHud();
   }
 
@@ -194,7 +317,7 @@
     }
 
     currentPhoto = next;
-    renderSlide();
+    renderSlide({ updatePhotoOnly: true });
     setStatus(`Photo ${currentPhoto + 1} of ${totalPhotos}.`);
   }
 
@@ -268,5 +391,9 @@
   }
 
   document.addEventListener('keydown', handleKey);
+  window.addEventListener('resize', () => {
+    const slide = slides[currentSlide];
+    fitStageToViewport(slide);
+  });
   start();
 })();
