@@ -14,63 +14,49 @@
         ]
     },
     {
-        "name": "smart_object_layer_photo0_size_2050x1806",
-        "human_name": "photo0",
+        "name": "smart_object_layer_photo1_size_1065x491",
+        "human_name": "logo1",
         "index": "2001",
         "kind": "smartobject",
         "text": "",
-        "bitmap": "slides/slide_01_smart_object_layer_photo0_size_2050x1806_1.png",
+        "bitmap": "slides/slide_01_smart_object_layer_photo1_size_1065x491_1.png",
         "bbox": [
-            1969,
-            390,
-            4019,
-            2196
+            1489,
+            1328,
+            2554,
+            1819
         ]
     },
     {
-        "name": "smart_object_layer_separator_size_6x1266",
-        "human_name": "separator",
+        "name": "smart_object_layer_photo1_size_179x179",
+        "human_name": "logo1",
         "index": "2002",
         "kind": "smartobject",
         "text": "",
-        "bitmap": "slides/common_smart_object_layer_separator.png",
+        "bitmap": "slides/slide_01_smart_object_layer_photo1_size_179x179_1.png",
         "bbox": [
-            1999,
-            555,
-            2005,
-            1821
+            1932,
+            1025,
+            2111,
+            1204
         ]
     },
     {
-        "name": "type_layer_text1_size_1325x71",
-        "human_name": "text1",
+        "name": "smart_object_layer_photo0_size_1088x472",
+        "human_name": "logo0",
         "index": "2003",
-        "kind": "type",
+        "kind": "smartobject",
         "text": "",
-        "bitmap": "slides/slide_01_type_layer_text1_size_1325x71_1.png",
+        "bitmap": "slides/slide_01_smart_object_layer_photo0_size_1088x472_1.png",
         "bbox": [
-            337,
-            1229,
-            1662,
-            1300
+            1447,
+            479,
+            2535,
+            951
         ]
     },
     {
-        "name": "type_layer_text0_size_1414x359",
-        "human_name": "text0",
-        "index": "2004",
-        "kind": "type",
-        "text": "",
-        "bitmap": "slides/slide_01_type_layer_text0_size_1414x359_1.png",
-        "bbox": [
-            294,
-            785,
-            1708,
-            1144
-        ]
-    },
-    {
-        "name": "group_slide1_size_3725x1806",
+        "name": "group_slide1_size_1107x1340",
         "human_name": "_slide 1",
         "index": "1001",
         "kind": "group",

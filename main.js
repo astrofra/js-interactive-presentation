@@ -152,13 +152,19 @@
     element.className = `layer ${getLayerType(item)}`;
     element.alt = item.human_name || item.name || 'layer';
     element.src = `static/${item.bitmap}`;
+    element.style.objectFit = 'contain';
 
     if (Array.isArray(item.bbox) && item.bbox.length === 4) {
       const [x1, y1, x2, y2] = item.bbox;
+      const boxWidth = x2 - x1;
+      const boxHeight = y2 - y1;
       element.style.left = percent(x1, base.width);
       element.style.top = percent(y1, base.height);
-      element.style.width = percent(x2 - x1, base.width);
-      element.style.height = percent(y2 - y1, base.height);
+      element.style.width = percent(boxWidth, base.width);
+      element.style.height = percent(boxHeight, base.height);
+      if (boxWidth > 0 && boxHeight > 0) {
+        element.style.aspectRatio = `${boxWidth} / ${boxHeight}`;
+      }
     }
 
     element.style.zIndex = String(parseIndex(item.index));

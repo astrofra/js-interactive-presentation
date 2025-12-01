@@ -14,205 +14,121 @@
         ]
     },
     {
-        "name": "smart_object_layer_bullets_size_80x1440invisible",
-        "human_name": "bullets",
-        "index": "1001",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_bullets_size_80x1440invisible_0.png",
-        "bbox": [
-            185,
-            416,
-            265,
-            1856
-        ]
-    },
-    {
-        "name": "smart_object_layer_photo6_size_1937x1486",
-        "human_name": "photo6",
+        "name": "smart_object_layer_photo1_size_1779x1260",
+        "human_name": "photo1",
         "index": "2001",
         "kind": "smartobject",
         "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo6_size_1937x1486_1.png",
+        "bitmap": "slides/slide_02_smart_object_layer_photo1_size_1779x1260_1.png",
         "bbox": [
-            2019,
-            567,
-            3956,
-            2053
+            2098,
+            476,
+            3877,
+            1736
         ]
     },
     {
-        "name": "smart_object_layer_photo5_size_1600x1857",
-        "human_name": "photo5",
+        "name": "smart_object_layer_photo0_size_1695x1057",
+        "human_name": "photo0",
         "index": "2002",
         "kind": "smartobject",
         "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo5_size_1600x1857_1.png",
+        "bitmap": "slides/slide_02_smart_object_layer_photo0_size_1695x1057_1.png",
         "bbox": [
-            2188,
-            231,
-            3788,
-            2088
+            2150,
+            553,
+            3845,
+            1610
         ]
     },
     {
-        "name": "smart_object_layer_photo4_size_1574x632",
-        "human_name": "photo4",
-        "index": "2003",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo4_size_1574x632_1.png",
-        "bbox": [
-            2198,
-            833,
-            3772,
-            1465
-        ]
-    },
-    {
-        "name": "smart_object_layer_photo3_size_1937x1486",
-        "human_name": "photo3",
-        "index": "2004",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo3_size_1937x1486_1.png",
-        "bbox": [
-            2019,
-            567,
-            3956,
-            2053
-        ]
-    },
-    {
-        "name": "smart_object_layer_photo2_size_1619x1730",
-        "human_name": "photo2",
-        "index": "2005",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo2_size_1619x1730_1.png",
-        "bbox": [
-            2178,
-            343,
-            3797,
-            2073
-        ]
-    },
-    {
-        "name": "smart_object_layer_photo1_size_1937x1406",
-        "human_name": "photo1",
-        "index": "2006",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo1_size_1937x1406_1.png",
-        "bbox": [
-            2020,
-            538,
-            3957,
-            1944
-        ]
-    },
-    {
-        "name": "smart_object_layer_photo0_size_1717x878",
-        "human_name": "photo0",
-        "index": "2007",
-        "kind": "smartobject",
-        "text": "",
-        "bitmap": "slides/slide_02_smart_object_layer_photo0_size_1717x878_1.png",
-        "bbox": [
-            2126,
-            685,
-            3843,
-            1563
-        ]
-    },
-    {
-        "name": "smart_object_layer_separator_size_6x1266",
+        "name": "smart_object_layer_separator_size_3x1275",
         "human_name": "separator",
-        "index": "2008",
+        "index": "2003",
         "kind": "smartobject",
         "text": "",
         "bitmap": "slides/common_smart_object_layer_separator.png",
         "bbox": [
-            1999,
-            555,
-            2005,
-            1821
+            2000,
+            550,
+            2003,
+            1825
         ]
     },
     {
-        "name": "type_layer_text3_size_1133x286",
+        "name": "type_layer_text3_size_1612x398",
         "human_name": "text3",
-        "index": "2009",
+        "index": "2004",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_text3_size_1133x286_1.png",
+        "bitmap": "slides/slide_02_type_layer_text3_size_1612x398_1.png",
         "bbox": [
-            223,
-            1617,
-            1356,
-            1903
+            226,
+            1435,
+            1838,
+            1833
         ]
     },
     {
-        "name": "type_layer_text2_size_1446x287",
+        "name": "type_layer_text2_size_1627x285",
         "human_name": "text2",
-        "index": "2010",
+        "index": "2005",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_text2_size_1446x287_1.png",
+        "bitmap": "slides/slide_02_type_layer_text2_size_1627x285_1.png",
         "bbox": [
-            223,
-            816,
-            1669,
-            1103
+            232,
+            1068,
+            1859,
+            1353
         ]
     },
     {
-        "name": "type_layer_text1_size_1189x285",
+        "name": "type_layer_text1_size_1627x285",
         "human_name": "text1",
-        "index": "2011",
+        "index": "2006",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_text1_size_1189x285_1.png",
+        "bitmap": "slides/slide_02_type_layer_text1_size_1627x285_1.png",
         "bbox": [
-            223,
-            1217,
-            1412,
-            1502
+            224,
+            692,
+            1851,
+            977
         ]
     },
     {
-        "name": "type_layer_text0_size_1339x285",
+        "name": "type_layer_text0_size_1428x174",
         "human_name": "text0",
-        "index": "2012",
+        "index": "2007",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_text0_size_1339x285_1.png",
+        "bitmap": "slides/slide_02_type_layer_text0_size_1428x174_1.png",
         "bbox": [
-            223,
-            417,
-            1562,
-            702
+            225,
+            432,
+            1653,
+            606
         ]
     },
     {
-        "name": "type_layer_slide_title_size_837x89",
+        "name": "type_layer_slide_title_size_1600x113",
         "human_name": "slide_title",
-        "index": "2013",
+        "index": "2008",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_slide_title_size_837x89_1.png",
+        "bitmap": "slides/slide_02_type_layer_slide_title_size_1600x113_1.png",
         "bbox": [
             238,
-            172,
-            1075,
-            261
+            173,
+            1838,
+            286
         ]
     },
     {
         "name": "smart_object_layer_title_decoration_size_11x95",
         "human_name": "title_decoration",
-        "index": "2014",
+        "index": "2009",
         "kind": "smartobject",
         "text": "",
         "bitmap": "slides/common_smart_object_layer_title_decoration.png",
@@ -224,9 +140,9 @@
         ]
     },
     {
-        "name": "group_slide3_size_3780x1917",
-        "human_name": "_slide 3",
-        "index": "1002",
+        "name": "group_slide1_size_3700x1662",
+        "human_name": "_slide 1",
+        "index": "1001",
         "kind": "group",
         "text": "",
         "bitmap": "",
@@ -247,14 +163,14 @@
         ]
     },
     {
-        "name": "type_layer_page_02_size_95x67",
+        "name": "type_layer_page_02_size_96x67",
         "human_name": "page_02",
         "index": "2002",
         "kind": "type",
         "text": "",
-        "bitmap": "slides/slide_02_type_layer_page_02_size_95x67_1.png",
+        "bitmap": "slides/slide_02_type_layer_page_02_size_96x67_1.png",
         "bbox": [
-            3712,
+            3711,
             2012,
             3807,
             2079
@@ -263,7 +179,7 @@
     {
         "name": "group_pages_size_128x128",
         "human_name": "pages",
-        "index": "1003",
+        "index": "1002",
         "kind": "group",
         "text": "",
         "bitmap": "",
