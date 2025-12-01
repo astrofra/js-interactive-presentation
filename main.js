@@ -95,6 +95,12 @@
     stageShell.style.aspectRatio = `${slide.baseWidth} / ${slide.baseHeight}`;
   }
 
+  function compareHumanName(a, b) {
+    const nameA = a?.human_name || '';
+    const nameB = b?.human_name || '';
+    return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: 'base' });
+  }
+
   function buildSlide(rawItems, order) {
     const background = rawItems.find(
       (item) => item.human_name === 'bg' && item.bitmap
@@ -111,15 +117,11 @@
 
     const photoItems = rawItems
       .filter((item) => /^photo\d+$/i.test(item.human_name))
-      .sort((a, b) => {
-        const aNum = parseInt(a.human_name.replace(/[^0-9]/g, ''), 10);
-        const bNum = parseInt(b.human_name.replace(/[^0-9]/g, ''), 10);
-        return aNum - bNum;
-      });
+      .sort(compareHumanName);
 
-    const textItems = rawItems.filter(
-      (item) => /^text\d+$/i.test(item.human_name) || item.human_name === 'slide_title'
-    );
+    const textItems = rawItems
+      .filter((item) => /^text\d+$/i.test(item.human_name) || item.human_name === 'slide_title')
+      .sort(compareHumanName);
 
     const staticOverlays = rawItems
       .filter((item) => item.bitmap)

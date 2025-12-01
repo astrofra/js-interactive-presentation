@@ -27,7 +27,7 @@
 - Cosmetics :
     - all the "human_name": "text0", "text1", "text2", ... should appear in a "fade in" (controling the opacity only). Each next text "fade in" should start with 150ms delay after the previous one.
     - when going from one image ("photo0", "photo1", either forward or backward), each new photo should appear in a 150ms "fade in" (controling the opacity as well, from 0% to 100%).
-
+    - As a "fade in" order, both text ("human_name": "text0") and images ("human_name": "photo0") should be ordered by the value of they "human_name" key. Ascending order, alphanum.
 ## Coding style
 
 - All comments in English
