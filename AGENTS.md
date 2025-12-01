@@ -19,7 +19,7 @@
     - The texts items are actually PNG of rasterized texts
     - For each item, the key "bitmap" will link to the relative path to the PNG, starting in the "static" folder
 - The entry point is a index.html
-- all logic could be in Javascript
+- all logic could be in Javascript file main.js
 - Should run online or offline, using the simplest way available 
 
 ## Coding style

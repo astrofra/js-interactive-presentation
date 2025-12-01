@@ -1,0 +1,14 @@
+{
+  // Launches a simple static server for the workspace.
+  // Requires Python 3 to be available in PATH.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Serve workspace (python -m http.server)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "python -m http.server 8000",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
